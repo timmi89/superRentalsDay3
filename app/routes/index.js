@@ -1,3 +1,4 @@
+// This guy is the parent of all of our model files
 import Ember from 'ember';
 
 //model (now in rentals.json and imported into database)
@@ -8,7 +9,10 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return this.store.findAll('rental');
+    return Ember.RSVP.hash({
+      cities: this.store.findAll('city'),
+      rentals: this.store.findAll('rental')
+    });
   },
 
 //info is passed up from index.hbs, here is where we actaully destroy the rental
@@ -19,11 +23,18 @@ actions: {
     newRental.save();
     this.transitionTo('index');
   },
+    saveC(params) {
+      var newCityName = this.store.createRecord('name', params);
+      newCityName.save();
+      this.transitionTo('index');
+    }
+  }
+
+
 
 //   update action = For each key in the params,
 // if it is NOT undefined,
 // take the rental and set the property that matches the current key, to the value of the current key,
 // after looping through all of the keys, save the rental,
 // transition to the index route.
-  }
 });
