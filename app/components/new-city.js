@@ -3,17 +3,17 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   addNewCity: false,
   actions: {
-    rentalFormShow() {
-      this.set('addnewCity', true);
+    cityFormShow() {
+      this.set('addNewCity', true);
     },
 
     saveA() {
       var params = {
         name: this.get('name'),
-        country: this.get("country"),
+        country: this.get('country'),
       };
-      this.set('addnewCity', false);
-      this.sendAction('saveB', params)
+      this.set('addNewCity', false);
+      this.sendAction('saveB', params);
     }
   }
-})
+});

@@ -24,7 +24,7 @@ actions: {
     this.transitionTo('index');
   },
     saveC(params) {
-      var newCityName = this.store.createRecord('name', params);
+      var newCityName = this.store.createRecord('city', params);
       newCityName.save();
       this.transitionTo('index');
     }
