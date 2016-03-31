@@ -1,0 +1,12 @@
+<!-- {{yield}} -->
+city name: {{city.name}}<br>
+country: {{city.country}}
+
+<ul>
+  {{#each city.rentals as |rental|}}
+    {{rental-tile rental=rental}}
+  {{/each}}
+</ul>
+
+<!-- CREATE DELETE CTIY BUTTON HERE -->
+<button {{action 'delete' city}}>delete city</button>
