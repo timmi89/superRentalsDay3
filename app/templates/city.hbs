@@ -1,0 +1,17 @@
+<!-- {{outlet}} -->
+
+<h1> Welcome to {{model.name}} </h1>
+
+city name: {{model.name}}<br>
+country: {{model.country}}
+
+<ul>
+  {{#each model.rentals as |rental|}}
+    {{rental-tile rental=rental}}
+  {{/each}}
+</ul>
+
+
+<!-- {{city-tile city=model destroyCity="destroyCity"}} -->
+
+{{new-rental save2="save3" city=model}}

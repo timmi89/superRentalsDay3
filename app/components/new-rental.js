@@ -9,7 +9,6 @@ export default Ember.Component.extend({
     rentalFormShow() {
       this.set('addNewRental', true);
     },
-
     save1() {
       var params = {
         owner: this.get('owner'),
