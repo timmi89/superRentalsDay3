@@ -1,0 +1,12 @@
+.jumbotron {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.application_hbs {
+  display:flex;
+  flex-direction: column;
+  .outlet {
+    flex: 1;
+  }
+}
