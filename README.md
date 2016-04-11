@@ -1,7 +1,8 @@
 # Super-rentals
 
 This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+ 
+This app creates user template for adding, editing, sorting by price of rental, and sorting by popularity of city.
 
 ## Prerequisites
 
@@ -40,8 +41,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 * `ember build --environment production` (production)
 
 ### Deploying
-
-Specify what it takes to deploy your app.
+Follow the above steps for easy depolyment. Additionally, while it is not absolutely essential, it would be much appreciated if you would create and use your own database. Insert your url in place of mine in the environment.js file. Thanks!
 
 ## Further Reading / Useful Links
 
